@@ -21,7 +21,7 @@ class User_add(Resource):
 		password = form.get("password")
 		openid = form.get("openid")
 		#phone,password不可以为空,username可以为空
-		if (not phone) or (not password):
+		if not phone or (not password):
 			return error.error_1001()
 
 		# 判断phone手机号是否存在

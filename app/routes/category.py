@@ -77,6 +77,7 @@ class Category_all(Resource):
 			return error.error_1006()
 		# 查询数据库
 		rows = Category.Query().filter_by(subject=subject).all()
+		print(rows)
 		categories = []
 		for r in rows:
 			question_count = Question.Query().filter_by(category_id=r.id).count()

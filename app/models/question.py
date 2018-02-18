@@ -7,6 +7,7 @@ class Question(db.Model):
 	'''问题数据模型'''
 	__tablename__ = "questions"
 	id = db.Column(db.Integer, primary_key = True)
+	no = db.Column(db.String("20"))
 	content = db.Column(db.String(2000), nullable=False)
 	right_answer = db.Column(db.String(10), nullable=False)
 	category_id = db.Column(db.Integer, nullable=False)
@@ -17,6 +18,7 @@ class Question(db.Model):
 	is_valid = db.Column(db.Boolean, default = True)
 
 	def __init__(self, data):
+		self.no = data.get("no")
 		self.content = data.get("content")
 		self.right_answer = data.get("right_answer")
 		self.category_id = data.get("category_id")

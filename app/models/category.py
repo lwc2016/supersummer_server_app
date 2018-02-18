@@ -14,7 +14,7 @@ class Category(db.Model):
 	def __init__(self, data):
 		self.name = data.get("name")
 		self.subject = data.get("subject")
-		self.chapter = db.get("chapter")
+		self.chapter = data.get("chapter")
 		self.created_time = datetime.now()
 
 	def __repr__(self):
