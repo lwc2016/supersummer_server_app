@@ -9,17 +9,17 @@ DEBUG = None
 PORT = None
 
 if env == "test":
-    print("<------测试环境------->")
+    print("<------测试环境1------->")
     SQLALCHEMY_DATABASE_URI = test.SQLALCHEMY_DATABASE_URI
     DEBUG = test.DEBUG
     PORT = test.PORT
 elif env == "production":
-    print("<------生产环境------->")
+    print("<------生产环境1------->")
     SQLALCHEMY_DATABASE_URI = production.SQLALCHEMY_DATABASE_URI
     DEBUG = production.DEBUG
     PORT = production.PORT
 else:
-    print("<------开发环境------------>")
+    print("<------开发环境1------------>")
     SQLALCHEMY_DATABASE_URI = development.SQLALCHEMY_DATABASE_URI
     DEBUG = development.DEBUG
     PORT = development.PORT
